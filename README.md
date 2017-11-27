@@ -4,7 +4,12 @@
 
 ####Steps to run your code
 
-#####Firt install emsdk and activate it:
+#####Firt run npm install, then download, install and activate emsdk
+
+```
+npm install
+
+```
 
 ```
 git clone https://github.com/juj/emsdk.git
