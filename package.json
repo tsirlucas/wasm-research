@@ -6,15 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "asc": "asc ascFib.ts -m bare --outFile wasm_output/ascFib.wasm"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "assemblyscript": "^0.3.0",
+    "typescript": "^2.6.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
   },
-  "dependencies": {
-    "wasm-loader": "^1.1.0"
-  }
+  "dependencies": {}
 }

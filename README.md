@@ -8,6 +8,7 @@
 
 ```
 npm install
+https://github.com/tsirlucas/wasm-research
 
 ```
 

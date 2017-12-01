@@ -27,16 +27,24 @@ function runTest(value) {
     fetch('wasm_output/jsFib.wasm').then((response) => response.arrayBuffer())
         .then((bytes) => WebAssembly.instantiate(bytes, importObj))
         .then((wa) => {
-            console.log('Wasm result:', wa.instance.exports._fibonacci(value));
-            console.timeEnd('Wasm timer: ');
+            console.log('C Wasm result:', wa.instance.exports._fibonacci(value));
+            console.timeEnd('C Wasm timer: ');
+        });
+
+    fetch('wasm_output/ascFib.wasm').then((response) => response.arrayBuffer())
+        .then((bytes) => WebAssembly.instantiate(bytes, importObj))
+        .then((wa) => {
+            console.log('ASC result:', wa.instance.exports.fibonacci(value));
+            console.timeEnd('ASC timer: ');
         });
 }
 
-console.time('Wasm timer: ');
+console.time('C Wasm timer: ');
+console.time('ASC timer: ');
 console.time('JS worker timer: ');
 
 // Big diff on 40000000 +
 // C has problems with int overflow
 // As well as js
 
-runTest(40);
+runTest(400000000);

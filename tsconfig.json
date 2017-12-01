@@ -1,0 +1,9 @@
+{
+  "extends": "./node_modules/assemblyscript/tsconfig.assembly.json",
+  "include": [
+    "ascFib.ts"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useCache": true
+  }
+}
