@@ -4,7 +4,7 @@
 
 ####Steps to run your code
 
-#####Firt run npm install, then download, install and activate emsdk
+#####First run npm install, then download, install and activate emsdk
 
 ```
 npm install
@@ -17,9 +17,9 @@ git clone https://github.com/juj/emsdk.git
 
 cd emsdk
 
-./emsdk install sdk-1.37.12-64bit
+./emsdk install sdk-1.37.27-64bit
 
-./emsdk activate --global sdk-1.37.12-64bit
+./emsdk activate --global sdk-1.37.27-64bit
 
 source ./emsdk_env.sh
 
